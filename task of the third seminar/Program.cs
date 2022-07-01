@@ -19,3 +19,20 @@ Console.Write("Введите число ");
 
 palindrome();
 */
+
+
+
+void cube(int N)
+{
+    int current = 1;
+    while(current<=N)
+    {
+        Console.WriteLine(current*current*current);
+        current++;
+    }
+}
+
+Console.Write("Введите число ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+cube(N);
