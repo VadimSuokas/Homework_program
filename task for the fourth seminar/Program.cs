@@ -1,5 +1,5 @@
 ﻿// Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-/*
+
 int Sum(int n)
 {
     int sum = 0;
@@ -15,7 +15,7 @@ Console.Write("Введите число ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine(Sum(num));
-*/
+
 //Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
 
 int[] ArrayElements(int m, int min, int max)
@@ -37,8 +37,8 @@ int min = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите максимальное значение числа в массиве ");
 int max = Convert.ToInt32(Console.ReadLine());
 
-int[] Array = ArrayElements(size, min, max);
-Console.WriteLine(Array);
+ArrayElements(size, min, max);
+
 
 
 
