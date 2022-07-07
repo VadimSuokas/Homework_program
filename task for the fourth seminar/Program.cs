@@ -16,3 +16,29 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine(Sum(num));
 */
+//Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
+
+int[] ArrayElements(int m, int min, int max)
+{
+    int[] array = new int[m];
+    
+    for(int i = 0; i < m; i++) 
+    {
+        array[i] = new Random().Next(min, max + 1);
+        Console.Write(array[i] + " ");
+    }       
+    return array;
+}
+
+Console.Write("Введите колличество элементов в массиве ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите минимальное значение числа в массиве ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите максимальное значение числа в массиве ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[] Array = ArrayElements(size, min, max);
+Console.WriteLine(Array);
+
+
+
