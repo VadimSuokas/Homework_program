@@ -3,7 +3,7 @@ int[] ArrayRandom(int size, int min, int max)
 {
     int[] array = new int[size];
     for(int i = 0; i < size; i++) 
-        if(min>99 && max<1000) array[i] = new Random().Next(min, max);
+        /*if(min>99 && max<1000)*/ array[i] = new Random().Next(min, max);
 
     return array;
 }
@@ -34,11 +34,23 @@ int[] Array = ArrayRandom(size, min, max);
 
 ShowArray(Array);
 
-int even = EvenNumbers(Array);
-Console.WriteLine("Колличество четных чисел в массиве равно " + even);
+//int even = EvenNumbers(Array);
+//Console.WriteLine("Колличество четных чисел в массиве равно " + even);
 
 
 
 // Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+int Sum(int[] Array)
+{
+    int sum = 0;
+    for(int i = 0; i < Array.Length; i++)
+        if(i % 2 != 0) sum += Array[i];
+    return sum;
+}
+
+int sum = Sum(Array);
+Console.WriteLine("Сумма элементов на нечетных позициях массива равна " + sum);
+
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
