@@ -22,3 +22,22 @@ Console.WriteLine("В введенном вами числе " + result + " ци
 
 // Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
 
+int SumNum(int m, int n)
+{
+    int sum = 0;
+
+    if(n >= m)
+    {
+        sum += m;
+        return sum + SumNum(m+1,n);
+    }
+    else return sum;
+}
+
+Console.Write("Введите первое число ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int sum = SumNum(m, n);
+Console.WriteLine("Сумма чисел в заданном промежутке равна " + sum);
